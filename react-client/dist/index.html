@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Suwannaphum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Khmer&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript" src="bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        var style2 = document.createElement('style');
+        style2.innerHTML =
+            '.aboveContainer {' +
+            'height: 57.8px;' +
+            'transition-timing-function: ease;' +
+            'transition: height 0.5s;'
+        '}';
+        var style1 = document.createElement('style');
+        style1.innerHTML =
+            '.aboveContainer {' +
+            'height: 52.8px;' +
+            'transition-timing-function: ease;' +
+            'transition: height 0.5s;'
+        '}';
+        var style3 = document.createElement('style');
+        style3.innerHTML =
+            '.container {' +
+            'margin-top: 10.5vh;' +
+            'transition-timing-function: ease;' +
+            'transition: margin-top 0.5s;'
+        '}';
+        var style4 = document.createElement('style');
+        style4.innerHTML =
+            '.container {' +
+            'margin-top: 10vh;' +
+            'transition-timing-function: ease;' +
+            'transition: margin-top 0.5s;'
+        '}';
+        var ref = document.querySelector('script');
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                ref.parentNode.insertBefore(style2, ref);
+                ref.parentNode.insertBefore(style3, ref);
+                console.log("OK");
+            } else {
+                ref.parentNode.insertBefore(style1, ref);
+                ref.parentNode.insertBefore(style4, ref);
+                $('.nav').removeClass('affix');
+            }
+        });
+
+        $('.navTrigger').click(function() {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+    </script>
+</body>
+
+</html>

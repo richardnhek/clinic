@@ -1,0 +1,725 @@
+.home {
+    width: 100%;
+    height: 1000px;
+    background-color: #FFDBE9;
+    background-position: center top;
+    background-size: cover;
+}
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: left;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 0.5rem;
+    margin-top: -3px;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 21px;
+}
+
+.imgLogo {
+    content: url('https://i.ibb.co/NC87wC9/Logo.png');
+    width: 18vh;
+    height: 18vh;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: 110px;
+    height: 80px;
+    margin-right: 2rem;
+    background-image: url('https://i.ibb.co/tcGx7MH/vineframe1-2-NEW.png');
+    background-position: center;
+    background-size: 109.6px 65px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #FF0090;
+    font-family: 'Suwannaphum', cursive;
+    line-height: 65px;
+    font-size: 14px;
+    height: auto;
+    position: relative;
+    top: 11px;
+}
+
+.nav div.main_list ul li:hover {
+    filter: invert(50%) sepia(19%) saturate(7262%) hue-rotate(270deg) brightness(91%) contrast(87%);
+}
+
+.nav div.main_list ul li a:hover {
+    color: #da70d6;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.searchButton {
+    display: none;
+}
+
+.nav {
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+@media screen and (min-width: 936px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    margin-top: 8.5vh;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.15);
+    height: 138px;
+}
+
+@media screen and (max-width:936px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 1vh;
+        margin-top: -2vh;
+    }
+    .nav div.main_list {
+        width: 50%;
+        height: 0;
+        float: right;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        margin-left: 15%;
+        margin-top: 6vh;
+        width: 25vh;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: none;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: left;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2.2vh;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+
+
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+    margin-top: 25px;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding-top: 3px;
+    background-color: #FFDBE9;
+}
+
+input,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.s130 {
+    float: left;
+    min-height: fit-content;
+    margin-top: 24px;
+    width: 280px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+}
+
+.s130 form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.s130 form .inner-form {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 34px;
+    overflow: hidden;
+}
+
+.s130 form .inner-form .input-field {
+    height: 50px;
+}
+
+.s130 form .inner-form .input-field input {
+    height: fit-content;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: fit-content;
+    font-size: 14px;
+    color: #000;
+}
+
+.s130 form .inner-form .input-field input.placeholder {
+    color: grey;
+    font-family: 'Khmer', cursive;
+    font-size: 12.5px;
+}
+
+.s130 form .inner-form .input-field input:-moz-placeholder {
+    color: grey;
+    font-size: 12.5px;
+    font-family: 'Khmer', cursive;
+}
+
+.s130 form .inner-form .input-field input::-webkit-input-placeholder {
+    color: grey;
+    font-size: 12.5px;
+    font-family: 'Khmer', cursive;
+}
+
+.s130 form .inner-form .input-field.first-wrap input::placeholder {
+    color: grey;
+    font-size: 12px;
+    font-family: 'Khmer', cursive;
+}
+
+.s130 form .inner-form .input-field input:hover,
+.s130 form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.s130 form .inner-form .input-field.first-wrap {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #ffdbe9;
+}
+
+.s130 form .inner-form .input-field.first-wrap input {
+    -ms-flex-positive: 1;
+    flex-grow: 0.9;
+    margin-left: 22px;
+}
+
+.s130 form .inner-form .input-field.first-wrap .svg-wrapper {
+    min-width: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.s130 form .inner-form .input-field.first-wrap svg {
+    width: 36px;
+    height: 40px;
+    fill: #fff;
+    margin-top: 2px;
+    margin-right: 15px;
+}
+
+.s130 form .info {
+    font-size: 15px;
+    color: #ccc;
+    padding-left: 26px;
+}
+
+@media screen and (max-width: 1184px) {
+    .s130 {
+        display: none;
+    }
+    .s130 form .inner-form .input-field.first-wrap {
+        display: none;
+    }
+    .divTrigger {
+        display: inline-block;
+    }
+    .searchButton {
+        float: right;
+        display: block;
+    }
+}
+
+.searchButton {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    position: absolute;
+    right: 10.2vh;
+    background-repeat: no-repeat;
+    background-color: lightpink;
+}
+
+.searchButton button {
+    margin-top: 7px;
+    width: 42px;
+    height: 42px;
+    background-color: lightpink;
+    border: none;
+}
+
+.searchButton svg {
+    width: 42px;
+    height: 42px;
+    fill: white;
+    background-color: lightpink;
+}
+
+#search_btn {
+    width: 50px;
+    height: 50px;
+    background-color: #ffdbe9;
+    border: 0;
+}
+
+.aboveContainer {
+    width: 100%;
+    height: 7vh;
+    position: fixed;
+    background-color: #fec5e5;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.15);
+}
+
+.shopBtn {
+    float: right;
+    width: 100px;
+    height: inherit;
+    margin-right: 6px;
+    margin-left: 2px;
+}
+
+.shopBtn:hover div text {
+    color: #da70d6;
+}
+
+.shopBtn:hover {
+    text-decoration: none!important;
+}
+
+.shopBtn div {
+    display: inline-flex;
+}
+
+.shopBtn div image {
+    background-image: url('https://i.ibb.co/BsZdwqL/shopping-cart-of-checkered-design.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 27px;
+    height: 36px;
+    margin-top: 9.5px;
+}
+
+.shopBtn div text {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 7.2px;
+    font-family: 'Suwannaphum', cursive;
+}
+
+.bookBtn {
+    float: right;
+    width: 165px;
+    height: inherit;
+    margin-right: 2px;
+}
+
+.bookBtn:hover div text {
+    color: #da70d6;
+}
+
+.bookBtn:hover {
+    text-decoration: none!important;
+}
+
+.aboveContainer a:hover div image {
+    filter: invert(50%) sepia(19%) saturate(7262%) hue-rotate(270deg) brightness(91%) contrast(87%);
+}
+
+.bookBtn div {
+    display: inline-flex;
+}
+
+.bookBtn div image {
+    background-image: url('https://i.ibb.co/Y7rzgd7/calendar-interface-symbol-tool.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 34px;
+    margin-top: 13px;
+}
+
+.bookBtn div text {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 7.2px;
+    font-family: 'Suwannaphum', cursive;
+}
+
+.contactBtn {
+    float: right;
+    width: fit-content;
+    height: inherit;
+    margin-right: 35px;
+}
+
+.contactBtn:hover div text {
+    color: #da70d6;
+}
+
+.contactBtn:hover {
+    text-decoration: none!important;
+}
+
+.contactBtn div {
+    display: inline-flex;
+}
+
+.contactBtn div image {
+    background-image: url('https://i.ibb.co/dpdF565/technology.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 34px;
+    margin-top: 13px;
+}
+
+.contactBtn div text {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 7.2px;
+    font-family: 'Suwannaphum', cursive;
+}
+
+.locationBtn {
+    float: left;
+    width: fit-content;
+    height: inherit;
+    margin-left: 47.1px;
+}
+
+.locationBtn:hover div text {
+    color: #da70d6;
+}
+
+.locationBtn:hover {
+    text-decoration: none!important;
+}
+
+.locationBtn div {
+    display: inline-flex;
+}
+
+.locationBtn div image {
+    background-image: url('https://i.ibb.co/y612dfY/seo-and-web.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 34px;
+    margin-top: 7px;
+}
+
+.locationBtn div text {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 7.2px;
+    font-family: 'Suwannaphum', cursive;
+    height: auto;
+    position: relative;
+    top: -6px;
+}
+
+.scbDiv {
+    width: fit-content;
+    right: 3px;
+    position: absolute;
+    height: auto;
+    top: -5.5px;
+}
+
+#engLang {
+    background-image: url('https://i.ibb.co/y0x8zNs/IMGBIN-flag-of-england-flag-of-the-united-kingdom-png-Lhh-Q9-Ja-N.png');
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #FFDBE9;
+    border: 0;
+    margin-top: 43px;
+    margin-left: 150px;
+}
+
+#khLang {
+    background-image: url('https://cdn.pixabay.com/photo/2013/07/13/09/54/cambodia-156281_640.png');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #FFDBE9;
+    border: 0;
+    margin-left: 5px;
+    position: relative;
+    bottom: 4px;
+}
+
+#Lang {
+    font-size: 12.5px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    position: absolute;
+    margin-top: 30px;
+    right: 110px;
+}
