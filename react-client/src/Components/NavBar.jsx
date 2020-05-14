@@ -8,17 +8,11 @@ class NavBar extends Component {
             <nav>
             <nav class="nav">
                 <div class="aboveContainer" id="abC">
+                    <div class="scblDiv">
                     <a href="#" class="locationBtn">
                         <div>
                             <image/>
                             <text>ទីតាំងការងារ</text>
-                        </div>
-                    </a>
-                    <div class="scbDiv">
-                    <a href="#" class="shopBtn">
-                        <div>
-                            <image/>
-                            <text>ទិញ</text>
                         </div>
                     </a>
                     <a href="#" class="contactBtn">
@@ -30,9 +24,18 @@ class NavBar extends Component {
                     <a href="#" class="bookBtn">
                         <div>
                             <image/>
-                            <text>កក់ការណាត់ជួប</text>
+                            <text>កក់ការពិគ្រោះ</text>
                         </div>
                     </a>
+                    <a href="#" class="shopBtn">
+                        <div>
+                            <image/>
+                            <text>ទិញ</text>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="langDiv">
+                        
                     </div>
                 </div>
                 <div class="container">
@@ -77,16 +80,14 @@ class NavBar extends Component {
                             </svg>
                         </button>
                     </div>
-                        <text id="Lang">Language:</text>
-                        <button id="engLang"/>
-                        <button id="khLang"/>
-                        {/* <Link to={{pathname: '/about'}}>About</Link> */}
+                    
+                    <div class="menuDiv">
                     <span class="navTrigger">
                         <i></i>
                         <i></i>
                         <i></i>
                     </span>
-
+                    </div>
 
                 </div>
             </nav>

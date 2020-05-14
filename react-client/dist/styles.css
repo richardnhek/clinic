@@ -1,14 +1,14 @@
 .home {
     width: 100%;
     height: 1000px;
-    background-color: #FFDBE9;
+    background-color: #fff;
     background-position: center top;
     background-size: cover;
 }
 
 .nav {
     width: 100%;
-    height: 65px;
+    height: 25%;
     position: fixed;
     line-height: 65px;
     text-align: left;
@@ -17,40 +17,46 @@
 .nav div.logo {
     float: left;
     width: auto;
-    height: auto;
-    padding-left: 0.5rem;
-    margin-top: -3px;
+    height: 95%;
 }
 
 .nav div.main_list {
-    height: 65px;
+    height: 100%;
+    width: 51.37%;
     float: left;
-    margin-left: 50px;
-    margin-top: 21px;
+    margin-left: 2%;
+    max-width: 765px;
+    max-height: 158px;
 }
 
 .imgLogo {
     content: url('https://i.ibb.co/NC87wC9/Logo.png');
-    width: 18vh;
-    height: 18vh;
+    width: auto;
+    height: auto;
+    padding: 4%;
+    max-width: 150px;
+    max-height: 150px;
 }
+
+
 
 .nav div.main_list ul {
     width: 100%;
-    height: 65px;
+    height: 100%;
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav div.main_list ul li {
-    width: 110px;
-    height: 80px;
-    margin-right: 2rem;
+    width: 16.66%;
+    height: fit-content;
+    margin-right: 2.73%;
     background-image: url('https://i.ibb.co/tcGx7MH/vineframe1-2-NEW.png');
     background-position: center;
-    background-size: 109.6px 65px;
+    background-size: 102.8% 99.1%;
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -63,7 +69,7 @@
     font-size: 14px;
     height: auto;
     position: relative;
-    top: 11px;
+    top: 0.5vh;
 }
 
 .nav div.main_list ul li:hover {
@@ -96,57 +102,92 @@
 
 .container {
     width: 100%;
-    margin-top: 8.5vh;
     box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.15);
-    height: 138px;
+    height: 100%;
+    max-height: 148px;
+    background-color: #FCE9EB;
 }
 
-@media screen and (max-width:936px) {
+@media screen and (max-width:936px) and (min-width: 768px){
     .navTrigger {
         display: block;
-    }
-    .nav div.logo {
-        margin-left: 1vh;
-        margin-top: -2vh;
     }
     .nav div.main_list {
         width: 50%;
         height: 0;
         float: right;
         overflow: hidden;
+        display: none;
     }
     .nav div.show_list {
-        height: auto;
+        height: 100vh;
+        max-height: 100vh;
+        top: 100%;
+        position: relative;
+        right: -1.7%;
+        max-width: 60vh;
         display: none;
     }
     .nav div.main_list ul {
         flex-direction: column;
-        margin-left: 15%;
-        margin-top: 6vh;
-        width: 25vh;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: none;
-        /*same background color of navbar*/
+        width: 25%;
+        height: fit-content;
         background-position: center top;
+        float: right;
+        position: relative;
+        right: 55%;
+        top: 8%;
     }
     .nav div.main_list ul li {
         width: 100%;
-        text-align: left;
+        text-align: center;
+        background-image: none;
     }
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 2.2vh;
+        font-size: 14px;
         padding: 20px;
     }
     .nav div.media_button {
         display: block;
     }
+} 
+
+@media screen and (max-width:981px) and (min-width:937px) {
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+    }
+    .nav div.main_list ul li {
+        width: 16.66%;
+        margin-right: 2.73%;
+    }
+    .nav div.main_list {
+        width: 70%;
+        height: 100%;
+        float: left;
+    }
 }
 
+@media screen and (max-width:1091px) and (min-width:982px){
+    .nav div.main_list {
+        width: 70%;
+        height: 100%;
+        float: left;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        
+    }
+    .nav div.main_list ul li {
+        width: 16.66%;
+        margin-right: 2.73%;
+    }
+}
 
 /* Animation */
 
@@ -155,14 +196,22 @@
 
 .navTrigger {
     cursor: pointer;
-    width: 30px;
-    height: 40px;
-    margin: auto;
+    width: 35px;
     position: absolute;
     right: 30px;
-    top: 0;
-    bottom: 0;
+    margin-top: 6.7%;
 }
+
+/* .menuDiv {
+    display: flex;
+    height: 67.568%;
+    width: 10.889%;
+    float: right;
+    position: relative;
+    right: 0.5%;
+    top: 15%;
+    background-color: #FEC5E5;
+} */
 
 .navTrigger i {
     background-color: #fff;
@@ -170,7 +219,7 @@
     content: '';
     display: block;
     width: 100%;
-    height: 4px;
+    height: 5.2px;
 }
 
 .navTrigger i:nth-child(1) {
@@ -178,11 +227,10 @@
     animation: outT 0.8s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
-    margin-top: 25px;
 }
 
 .navTrigger i:nth-child(2) {
-    margin: 5px 0;
+    margin: 7.2px 0;
     -webkit-animation: outM 0.8s backwards;
     animation: outM 0.8s backwards;
     -webkit-animation-direction: reverse;
@@ -204,6 +252,7 @@
 .navTrigger.active i:nth-child(2) {
     -webkit-animation: inM 0.8s forwards;
     animation: inM 0.8s forwards;
+    margin: 4px 0px;
 }
 
 .navTrigger.active i:nth-child(3) {
@@ -359,15 +408,15 @@ button {
 
 .s130 {
     float: left;
-    min-height: fit-content;
-    margin-top: 24px;
     width: 280px;
+    height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    padding: 15px;
+    padding: 35px 15px 15px 15px;
+    align-items: center;
 }
 
 .s130 form {
@@ -438,7 +487,7 @@ button {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    background: #ffdbe9;
+    background: inherit;
 }
 
 .s130 form .inner-form .input-field.first-wrap input {
@@ -472,39 +521,26 @@ button {
     padding-left: 26px;
 }
 
-@media screen and (max-width: 1184px) {
-    .s130 {
-        display: none;
-    }
-    .s130 form .inner-form .input-field.first-wrap {
-        display: none;
-    }
-    .divTrigger {
-        display: inline-block;
-    }
-    .searchButton {
-        float: right;
-        display: block;
-    }
-}
 
 .searchButton {
     width: fit-content;
     height: fit-content;
+    max-width: 59px;
+    max-height: 53px;
     border: none;
     overflow: hidden;
     outline: none;
     position: absolute;
     right: 10.2vh;
     background-repeat: no-repeat;
-    background-color: lightpink;
+    background-color: inherit;
 }
 
 .searchButton button {
-    margin-top: 7px;
+    margin-top: 6px;
     width: 42px;
     height: 42px;
-    background-color: lightpink;
+    background-color: inherit;
     border: none;
 }
 
@@ -512,30 +548,28 @@ button {
     width: 42px;
     height: 42px;
     fill: white;
-    background-color: lightpink;
+    background-color: inherit;
 }
 
 #search_btn {
     width: 50px;
     height: 50px;
-    background-color: #ffdbe9;
+    background-color: inherit;
     border: 0;
 }
 
 .aboveContainer {
     width: 100%;
-    height: 7vh;
-    position: fixed;
+    height: 40%;
     background-color: #fec5e5;
     box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.15);
+    max-height: 50px;
 }
 
 .shopBtn {
-    float: right;
-    width: 100px;
-    height: inherit;
-    margin-right: 6px;
-    margin-left: 2px;
+    width: 20%;
+    max-width: 65px;
+    height: 100%;
 }
 
 .shopBtn:hover div text {
@@ -557,21 +591,14 @@ button {
     background-position: center;
     width: 27px;
     height: 36px;
-    margin-top: 9.5px;
-}
-
-.shopBtn div text {
-    font-size: 14px;
-    color: #fff;
-    margin-left: 7.2px;
-    font-family: 'Suwannaphum', cursive;
+    position: relative;
+    top: -3%;
 }
 
 .bookBtn {
-    float: right;
-    width: 165px;
-    height: inherit;
-    margin-right: 2px;
+    width: 20%;
+    max-width: 125px;
+    height: 100%;
 }
 
 .bookBtn:hover div text {
@@ -583,7 +610,7 @@ button {
 }
 
 .aboveContainer a:hover div image {
-    filter: invert(50%) sepia(19%) saturate(7262%) hue-rotate(270deg) brightness(91%) contrast(87%);
+    filter: invert(30%) sepia(19%) saturate(7262%) hue-rotate(270deg) brightness(91%) contrast(87%);
 }
 
 .bookBtn div {
@@ -596,22 +623,15 @@ button {
     background-size: contain;
     background-position: center;
     width: 25px;
+    max-width: 25px;
     height: 34px;
-    margin-top: 13px;
-}
-
-.bookBtn div text {
-    font-size: 14px;
-    color: #fff;
-    margin-left: 7.2px;
-    font-family: 'Suwannaphum', cursive;
+    max-height: 25px;
 }
 
 .contactBtn {
-    float: right;
-    width: fit-content;
-    height: inherit;
-    margin-right: 35px;
+    width: 20%;
+    max-width: 120px;
+    height: 100%;
 }
 
 .contactBtn:hover div text {
@@ -632,22 +652,15 @@ button {
     background-size: contain;
     background-position: center;
     width: 25px;
+    max-width: 25px;
     height: 34px;
-    margin-top: 13px;
-}
-
-.contactBtn div text {
-    font-size: 14px;
-    color: #fff;
-    margin-left: 7.2px;
-    font-family: 'Suwannaphum', cursive;
+    max-height: 34px;
 }
 
 .locationBtn {
-    float: left;
-    width: fit-content;
-    height: inherit;
-    margin-left: 47.1px;
+    width: 20%;
+    height: 100%;
+    max-width: 120px;
 }
 
 .locationBtn:hover div text {
@@ -668,58 +681,90 @@ button {
     background-size: contain;
     background-position: center;
     width: 25px;
+    max-width: 25px;
     height: 34px;
-    margin-top: 7px;
+    max-height: 34px;
 }
 
-.locationBtn div text {
-    font-size: 14px;
+
+.scblDiv {
+    width: 45%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 3.9%;
+}
+
+.scblDiv a {
+    margin-right: 3%;
+}
+
+.scblDiv a div {
+    display: flex!important;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.scblDiv a div text {
+    font-size: 13.5px;
     color: #fff;
-    margin-left: 7.2px;
     font-family: 'Suwannaphum', cursive;
-    height: auto;
     position: relative;
-    top: -6px;
+    top: -10%;
+    left: 5%;
+    height: fit-content;
+    width: auto;
+    max-height: 100%;
 }
 
-.scbDiv {
-    width: fit-content;
-    right: 3px;
-    position: absolute;
-    height: auto;
-    top: -5.5px;
+
+.langDiv {
+    height: 100%;
+    width: 20%;
+    float: right;
+    display: flex;
+    align-items: center;
 }
 
-#engLang {
-    background-image: url('https://i.ibb.co/y0x8zNs/IMGBIN-flag-of-england-flag-of-the-united-kingdom-png-Lhh-Q9-Ja-N.png');
-    width: 38px;
-    height: 38px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #FFDBE9;
-    border: 0;
-    margin-top: 43px;
-    margin-left: 150px;
+
+@media screen and (max-width: 1091px) and (min-width: 768px){
+    .s130 {
+        display: none;
+    }
+    .s130 form .inner-form .input-field.first-wrap {
+        display: none;
+    }
+    .divTrigger {
+        display: inline-block;
+    }
+    .searchButton {
+        right: 3%;
+        display: block;
+        margin-top: 4.4%;
+    }
+    .searchButton button {
+        width: fit-content;
+        height: fit-content;
+        background-color: inherit;
+        border: none;
+    }
+    .searchButton svg {
+        width: 6.8vh;
+        height: 6.5vh;
+        fill: white;
+        background-color: inherit;
+        max-width: 47px;
+        max-height: 45px;
+    }
 }
 
-#khLang {
-    background-image: url('https://cdn.pixabay.com/photo/2013/07/13/09/54/cambodia-156281_640.png');
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #FFDBE9;
-    border: 0;
-    margin-left: 5px;
-    position: relative;
-    bottom: 4px;
-}
-
-#Lang {
-    font-size: 12.5px;
-    font-family: 'Poppins', sans-serif;
-    color: #000;
-    position: absolute;
-    margin-top: 30px;
-    right: 110px;
+@media screen and (max-width: 936px){
+    .searchButton {
+        right: 10%;
+        display: block;
+        margin-top: 5%;
+    }
 }
